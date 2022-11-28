@@ -1,0 +1,71 @@
+:root{
+    --primary: #f5ed0b;
+    --friends: #0e67ec;
+    --family:var(--primary);
+    --work: #df8d79;
+    --light: #eee;
+    --dark: #01010c;
+    --grey: #aaa;
+    --danger: #ff5b57;
+
+    --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --friends-glow: 0px 0px 4px rgba(14, 103, 236,0.75);
+    --family-glow: 0px 0px 4px rgba(245, 237, 11,0.78);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'oleo', sans-serif;
+}
+
+input:not([type="radio"]):not([type="checkbox"]),button{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: initial; 
+}
+body{
+    background: var(--light);
+    color: var(--dark);
+}
+
+section{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+h3{
+    color: var(--dark);
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+h4{
+    color: var(--grey);
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.greeting .title {
+    display: flex;
+}
+
+.greeting .title input{
+    margin-left: 0.5rem;
+    flex: 1 1 0%;
+    min-width: 0;
+}
+
+.greeting .title,
+.greeting .title input {
+    color: var(--dark);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
