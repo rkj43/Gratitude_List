@@ -1,67 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gratitude List</title>
-    <link rel="stylesheet" href="main.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap" rel="stylesheet">
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Gratitude List 2022 with LocalStorage</title>
+	<!-- CSS Import -->
+	<link rel="stylesheet" href="main.css" />
+	<!-- End of CSS Import -->
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,400&family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+	<!-- End of Fonts -->
 </head>
 <body>
-    <main class="app">
-        <section class="greeting">
-            <h2 class="title">
-                What's up? , <input type="text" id="name" placeholder="Enter your name here!"/>
-            </h2>
-        </section>
-        <section class="Gratitude List">
-            <h3>Create a Gratitude List</h3>
-            <form id="new-graditude-form">
-                <h4>Who's on your Gratitude List?</h4>
-                <input type="text" name="content" placeholder="Rahul K Johny">
-                <h4>Pick a category</h4>
-                <div class="options">
-                    <label>
-                        <input type="radio" name="category" id="category1" value="friends"/>
-                        <span class="bubble friends"></span>      
-                        <div>Friends</div> 
-                    </label>
-                    <label>
-                        <input type="radio" name="category" id="category2" value="family"/>
-                        <span class="bubble family"></span>      
-                        <div>Family</div> 
-                    </label>
-                    <label>
-                        <input type="radio" name="category" id="category3" value="work"/>
-                        <span class="bubble work"></span>      
-                        <div>Work</div> 
-                    </label>
-                </div>
-                <input type="submit" value="submit" />
-            </form>
-        </section>
-        <section class="gratitude-list">
-            <h3>Gratitude List</h3>
-            <div class="list" id="gratitude-list">
-                <div class="gratitudeitem">
-                    <label>
-                        <input type="checkbox"/>
-                        <span class="bubble friends"></span>
-                    </label>
-                    <div class="gratitude-content">
-                        <input type="text" value="Rahul"/>
-                    </div>
-                    <div class="actions">
-                        <button class="edit">Edit</button>
-                        <button class="delete">Delete</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <script scr="main.js"></script>
+	<!-- App Wrapper -->
+	<main class="app">
+		<!-- Greeting -->
+		<section class="greeting">
+			<h2 class="title">
+				What's up, <input type="text" id="name" placeholder="Name here" />
+			</h2>
+		</section>
+		<!-- End of Greeting -->
+		
+		<!-- New gratitude -->
+		<section class="create-gratitude">
+			<h3>Who would you like to thank today?</h3>
+			<form id="new-gratitude-form">
+				<h4>Shower some gratitude</h4>
+				<input 
+					type="text" 
+					placeholder="e.g Rahul from work"
+					name="content"
+					id="content" />
+				
+				<h4>Pick a category</h4>
+				<div class="options">
+					<label>
+						<input type="radio" name="category" id="category1" value="work" /> 
+						<span class="bubble work"></span>
+						<div>Work</div>
+					</label>
+					<label>
+						<input type="radio" name="category" id="category2" value="personal" />
+						<span class="bubble personal"></span>
+						<div>Personal</div>
+					</label>
+				</div>
+
+				<input type="submit" value="Add gratitude" />
+			</form>
+		</section>
+		<!-- End of New gratitude -->
+
+		<!-- gratitude List -->
+		<section class="gratitude-list">
+			<h3>GRATITUDE LIST</h3>
+			<div class="list" id="gratitude-list"></div>
+		</section>
+		<!-- End of gratitude List -->
+
+	</main>
+	<!-- End of App Wrapper -->
+
+	<!-- JS Import -->
+	<script src="main.js"></script>
+	<!-- End of JS Import -->
 </body>
 </html>
